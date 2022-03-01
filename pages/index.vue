@@ -32,7 +32,7 @@
     <div class="text-2xl text-slate-600 font-semibold mb-6 md:mb-10">커리큘럼</div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8">
       <div v-for='course of courses' :key="course">
-        <nuxt-link :to='`${course.slug}/1-1`'>
+        <nuxt-link :to='`${course.slug}/0-1`'>
           <div class="group">
             <div class="lead-box rounded-lg h-content mb-5">
               <img :src="require(`~/assets/resources/thumbnails/${course.image}`)" class="profile group-hover:scale-105 transition duration-300" alt="course thumbnail">
