@@ -485,7 +485,7 @@ async asyncData({ $content, params }) {
         .fetch();
 
         const list_9 = await $content(curriculumName)
-        .where({category: cat_2})
+        .where({category: cat_9})
         .sortBy('slug', 'asc')
         .fetch();
 

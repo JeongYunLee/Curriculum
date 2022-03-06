@@ -1,7 +1,7 @@
 <template>
 <div class="flex">
 
-    <div class="hidden md:block w-80 min-w-max py-10 px-8 border-r border-slate-600 min-h-screen">
+    <div class="hidden md:block min-w-min max-w-max py-10 px-8 border-r border-slate-600 min-h-screen">
 
         <div class="font-semibold text-slate-600 text-xl mb-4">{{currilist[0]["name"]}}</div>
 
@@ -484,7 +484,7 @@ async asyncData({ $content, params }) {
         .fetch();
 
         const list_9 = await $content(curriculumName)
-        .where({category: cat_2})
+        .where({category: cat_9})
         .sortBy('slug', 'asc')
         .fetch();
 

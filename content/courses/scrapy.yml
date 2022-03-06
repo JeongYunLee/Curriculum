@@ -3,7 +3,7 @@ description: '느리고 답답한 웹 크롤링은 그만, 현존 최강 웹 크
 authors: ['김민석', '신윤진', '송혜민']
 slug: scrapy
 image: scrapy.png
-order: 3
+order: 4
 category: [
   "0. 추천 학습 가이드",
   "1. Scrapy 소개 및 설치", 
@@ -17,3 +17,4 @@ category: [
   "9. 학습 과제"
   ]
   
+betaTest: '검수 전'
