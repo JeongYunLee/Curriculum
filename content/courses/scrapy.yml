@@ -6,5 +6,14 @@ image: scrapy.png
 order: 3
 category: [
   "0. 추천 학습 가이드",
-  "1. Scrapy"
+  "1. Scrapy 소개 및 설치", 
+  "2. Scrapy shell", 
+  "3. Scrapy 프로젝트 생성", 
+  "4. Spider(크롤러) 만들기", 
+  "5. 크롤링 데이터 다루기", 
+  "6. [프로젝트] 11번가 사이트 카테고리별 베스트 상품 크롤링", 
+  "7. 텍스트 에디터 - VS Code", 
+  "8. Scrapy Logging", 
+  "9. 학습 과제"
   ]
+  
