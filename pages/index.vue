@@ -1,7 +1,7 @@
 <template>
 <div class="w-full">
 
-  <Warning />
+  <!-- <Warning /> -->
 
   <HeaderAlt />
 
