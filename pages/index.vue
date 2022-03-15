@@ -39,9 +39,12 @@
             </div>
             <div>
               <div class="text-slate-600 text-xl font-medium mb-2 group-hover:text-blue-500 transition duration-200 flex items-center">{{course.name}} 
-                <span v-if="`${course.betaTest}` == '검수 완료'"  class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-400 rounded font-normal">{{course.betaTest}}</span> 
-                <span v-if="`${course.betaTest}` == '검수 중'"  class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-rose-400 rounded font-normal">{{course.betaTest}}</span> 
-                <span v-if="`${course.betaTest}` == '검수 전'"  class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-zinc-400 rounded font-normal">{{course.betaTest}}</span> 
+                <span v-if="`${course.type}` == 'Original'"  class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-emerald-400 rounded font-normal">{{course.type}}</span> 
+                <span v-if="`${course.type}` == 'Roadmap'"  class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-amber-400 rounded font-normal">{{course.type}}</span> 
+                <span v-else > </span> 
+                <span v-if="`${course.betaTest}` == '검수 완료'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-400 rounded font-normal">{{course.betaTest}}</span> 
+                <span v-if="`${course.betaTest}` == '검수 중'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-rose-400 rounded font-normal">{{course.betaTest}}</span> 
+                <span v-if="`${course.betaTest}` == '검수 전'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-zinc-400 rounded font-normal">{{course.betaTest}}</span> 
                 <span v-else > </span> 
               </div>
               <div class="keep-all text-slate-500 mb-1.5">{{course.description}}</div>
