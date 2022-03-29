@@ -6,155 +6,21 @@
         <div class="font-semibold text-slate-600 text-xl mb-4">{{currilist[0]["name"]}}</div>
 
         <div>
-
-            <div v-if="cat_1==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_1}}</div>
-
-                <div v-for='list of list_1' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
+            
+            <div v-for="(cat, i) in cats" :key="i">
+                <div v-if="cat!=null">
+                    <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat}}</div>
+                    <div v-for='list of lists[`${i}`]' :key="list" class="pl-5">
+                                <div class="group">
+                                    <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200 nav-item">
+                                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace class="nav-item">
+                                        {{list.slug}}. {{list.title}}
+                                        </nuxt-link>
+                                    </div>
+                                </div>
+                    </div>
                 </div>
-            </div>
-
-            <div v-if="cat_2==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_2}}</div>
-
-                <div v-for='list of list_2' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_3==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_3}}</div>
-
-                <div v-for='list of list_3' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_4==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_4}}</div>
-
-                <div v-for='list of list_4' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_5==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_5}}</div>
-
-                <div v-for='list of list_5' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_6==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_6}}</div>
-
-                <div v-for='list of list_6' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_7==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_7}}</div>
-
-                <div v-for='list of list_7' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_8==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_8}}</div>
-
-                <div v-for='list of list_8' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_9==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_9}}</div>
-
-                <div v-for='list of list_9' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
-            </div>
-
-            <div v-if="cat_10==null"></div>
-            <div v-else>
-                <div class="font-medium text-slate-600 text-lg mb-2.5">{{cat_10}}</div>
-
-                <div v-for='list of list_10' :key="list" class="pl-5">
-                        <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                        <div class="group">
-                            <div class="keep-all text-slate-600 text mb-2 group-hover:text-blue-500 transition duration-200">
-                                {{list.slug}}. {{list.title}}
-                            </div>
-                        </div>
-                        </nuxt-link>
-                </div>
+                <div v-else></div>
             </div>
 
         </div>
@@ -209,154 +75,20 @@
 
                     <div>
 
-                        <div v-if="cat_1==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_1}}</div>
-
-                            <div v-for='list of list_1' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
+                        <div v-for="(cat, i) in cats" :key="i">
+                            <div v-if="cat!=null">
+                                <div class="font-medium text-slate-600 mb-2.5">{{cat}}</div>
+                                <div v-for='list of lists[`${i}`]' :key="list" class="pl-5">
+                                            <div class="group">
+                                                <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200 nav-item">
+                                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace class="nav-item">
+                                                    {{list.slug}}. {{list.title}}
+                                                    </nuxt-link>
+                                                </div>
+                                            </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div v-if="cat_2==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_2}}</div>
-
-                            <div v-for='list of list_2' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_3==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_3}}</div>
-
-                            <div v-for='list of list_3' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_4==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_4}}</div>
-
-                            <div v-for='list of list_4' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_5==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_5}}</div>
-
-                            <div v-for='list of list_5' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_6==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_6}}</div>
-
-                            <div v-for='list of list_6' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_7==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_7}}</div>
-
-                            <div v-for='list of list_7' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_8==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_8}}</div>
-
-                            <div v-for='list of list_8' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_9==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_9}}</div>
-
-                            <div v-for='list of list_9' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
-                        </div>
-
-                        <div v-if="cat_10==null"></div>
-                        <div v-else>
-                            <div class="font-medium text-slate-600 mb-2.5">{{cat_10}}</div>
-
-                            <div v-for='list of list_10' :key="list" class="pl-5">
-                                    <nuxt-link :to="{path: `/${currititle}/${list.slug}`}" replace>
-                                    <div class="group">
-                                        <div class="keep-all text-slate-600 text-sm mb-2 group-hover:text-blue-500 transition duration-200">
-                                            {{list.slug}}. {{list.title}}
-                                        </div>
-                                    </div>
-                                    </nuxt-link>
-                            </div>
+                            <div v-else></div>
                         </div>
 
                     </div>
@@ -401,7 +133,7 @@ export default {
         formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('ko', options)
-        }
+        },
     },
     watch: {
         isOpen: {
@@ -442,6 +174,8 @@ async asyncData({ $content, params }) {
         const cat_8 = currilist[0]["category"][7]
         const cat_9 = currilist[0]["category"][8]
         const cat_10 = currilist[0]["category"][9]
+
+        const cats = [cat_1, cat_2, cat_3, cat_4, cat_5, cat_6, cat_7, cat_8, cat_9, cat_10]
 
         const list_1 = await $content(curriculumName)
         .where({category: cat_1})
@@ -499,11 +233,9 @@ async asyncData({ $content, params }) {
         .surround(params.slug)
         .fetch();
 
-        return { curriname, currilist, 
-        cat_1, cat_2, cat_3, cat_4, cat_5, cat_6, cat_7, cat_8, cat_9, cat_10,
-        list_1, list_2, list_3, list_4, list_5, list_6, list_7, list_8, list_9, list_10,
-        prev, next, currititle, curriculumName
-        }
+        const lists = [list_1, list_2, list_3, list_4, list_5, list_6, list_7, list_8, list_9, list_10]
+
+        return { curriname, currilist, prev, next, currititle, curriculumName, cats, lists}
     },
 
     head() {
@@ -569,5 +301,10 @@ code::after {
 }
 img{
     margin: auto;
+}
+.nav-item:hover,
+.nav-item:active,
+.nav-item.nuxt-link-active {
+    color: #3b82f6;
 }
 </style>
