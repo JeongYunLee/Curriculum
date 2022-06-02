@@ -38,15 +38,18 @@
               <img :src="require(`~/assets/resources/thumbnails/${course.image}`)" class="profile group-hover:scale-105 transition duration-300" alt="course thumbnail">
             </div>
             <div>
-              <div class="text-slate-600 text-xl font-medium mb-2 group-hover:text-blue-500 transition duration-200 flex items-center">{{course.name}} 
-                <span v-if="`${course.type}` == 'Original'"  class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-emerald-400 rounded font-normal">{{course.type}}</span> 
-                <span v-if="`${course.type}` == 'Roadmap'"  class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-amber-400 rounded font-normal">{{course.type}}</span> 
-                <span v-else > </span> 
-                <span v-if="`${course.betaTest}` == '검수 완료'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-400 rounded font-normal">{{course.betaTest}}</span> 
-                <span v-if="`${course.betaTest}` == '검수 중'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-rose-400 rounded font-normal">{{course.betaTest}}</span> 
-                <span v-if="`${course.betaTest}` == '검수 전'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-zinc-400 rounded font-normal">{{course.betaTest}}</span> 
-                <span v-if="`${course.betaTest}` == '업데이트 중'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-amber-400 rounded font-normal">{{course.betaTest}}</span> 
-                <span v-else > </span> 
+              <div class=" mb-1.5 flex items-center keep-all">
+                <div class="text-slate-600 text-xl font-medium group-hover:text-blue-500 transition duration-200">{{course.name}}</div> 
+              </div>
+              <div class="flex items-center mb-2">
+                <div v-if="`${course.type}` == 'Original'"  class="px-1.5 py-1 text-xs md:text-xs text-white bg-emerald-400 rounded font-normal">{{course.type}}</div> 
+                <div v-if="`${course.type}` == 'Roadmap'"  class="px-1.5 py-1 text-xs md:text-xs text-white bg-amber-400 rounded font-normal">{{course.type}}</div> 
+                <div v-else > </div> 
+                <div v-if="`${course.betaTest}` == '검수 완료'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-if="`${course.betaTest}` == '검수 중'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-rose-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-if="`${course.betaTest}` == '검수 전'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-zinc-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-if="`${course.betaTest}` == '업데이트 중'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-amber-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-else > </div> 
               </div>
               <div class="keep-all text-slate-500 mb-1.5">{{course.description}}</div>
               <div class="text-sm text-slate-400">커리 개발: {{course.authors[0]}} {{course.authors[1]}} {{course.authors[2]}} {{course.authors[3]}}</div>
