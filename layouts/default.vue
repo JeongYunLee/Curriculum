@@ -1,6 +1,6 @@
 <template>
   <div>
-    <link rel="stylesheet" type='text/css' media='all' href="../assets/css/font.css">
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/font.css">
     <!-- <Warning /> -->
     <!-- <Header /> -->
     <Nuxt />
