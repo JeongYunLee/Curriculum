@@ -2,7 +2,7 @@ name: 'R 기초'
 description: 'R을 활용한 기초적인 데이터 전처리 및 시각화하는 법을 공부합니다.'
 authors: ['신윤진']
 slug: basic-r
-image: not-ready.png
+image: basic-r.png
 order: 6
 category: [
   "0. 추천 학습 가이드",
