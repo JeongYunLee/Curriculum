@@ -3,7 +3,7 @@ description: '가장 널리 사용되는 MySQL를 통해 데이터베이스 기�
 authors: ['이정윤', '정찬']
 slug: 'basic-sql'
 image: 'basic-sql.png'
-order: 5
+order: 3
 category: [
   "0. 추천 학습 가이드",
   "1. SQL 시작하기",
@@ -11,3 +11,5 @@ category: [
   "3. 실전 데이터 분석 프로젝트",
   "4. PyMySQL 익혀보기"
   ]
+betaTest: '검수 중'
+type: 'Original'

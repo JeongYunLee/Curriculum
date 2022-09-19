@@ -1,19 +1,13 @@
 # COSADAMA Curriculum
 
+코사다마의 오픈소스 커리큘럼을 보다 쉽게 공부할 수 있도록 만들어진 웹 공간입니다. 
+(GitBook like docs site template built with Nuxt Content + Tailwind CSS)
+
 ## Install Dependencies
 
 ```bash
 # install node dependencies
 $ npm install
-
-# install Tailwind CSS
-$ npm install -D @nuxtjs/tailwindcss tailwindcss@latest postcss@latest autoprefixer@latest
-
-# install Tailwind Typography
-$ npm install @tailwindcss/typography
-
-# install nuxt-content-git
-$ npm install nuxt-content-git
 
 # serve with hot reload at localhost:3000
 $ npm run dev
