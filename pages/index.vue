@@ -1,19 +1,9 @@
 <template>
 <div class="w-full">
 
-  <Warning />
+  <!-- <Warning /> -->
 
   <HeaderAlt />
-
-  <!-- <div class="w-full bg-gradient-to-r from-slate-300 via-blue-200 to-slate-50">
-      <Header />
-      <div class="max-w-6xl py-20 md:py-28 px-5 md:px-20 mx-auto">
-        <div class="text-2xl text-center md:text-left text-slate-600 font-semibold mb-9 leading-9 drop-shadow-sm">중앙대 비전공자 코딩 커뮤니티, <br> 코사다마의 <span class="underline-offset-2">오픈소스 커리큘럼</span>이 <br> 업로드되는 공간입니다.</div>
-        <div class="flex justify-center md:block md:justify-start">
-          <a href="https://cosadama.com" target="blank" class="drop-shadow-sm py-2.5 px-3 bg-transparent text-slate-500 rounded-lg border border-slate-400 text-sm hover:bg-slate-100 transition duration-200">자세히 알아보기</a>
-        </div>
-      </div>
-  </div> -->
 
   <div class="bg-img section w-full py-40 sm:py-48 md:py-60 2xl:py-72 recruit-img relative"  style="background-image: url(team3.jpeg)">
   <div class="z-10 w-full h-full bg-gradient-to-t from-zinc-800 absolute bottom-0">
@@ -38,7 +28,19 @@
               <img :src="require(`~/assets/resources/thumbnails/${course.image}`)" class="profile group-hover:scale-105 transition duration-300" alt="course thumbnail">
             </div>
             <div>
-              <div class="text-slate-600 text-xl font-medium mb-2 group-hover:text-blue-500 transition duration-200">{{course.name}}</div>
+              <div class=" mb-1.5 flex items-center keep-all">
+                <div class="text-slate-600 text-xl font-medium group-hover:text-blue-500 transition duration-200">{{course.name}}</div> 
+              </div>
+              <div class="flex items-center mb-2">
+                <div v-if="`${course.type}` == 'Original'"  class="px-1.5 py-1 text-xs md:text-xs text-white bg-emerald-400 rounded font-normal">{{course.type}}</div> 
+                <div v-else-if="`${course.type}` == 'Roadmap'"  class="px-1.5 py-1 text-xs md:text-xs text-white bg-amber-400 rounded font-normal">{{course.type}}</div> 
+                <div v-else > </div> 
+                <div v-if="`${course.betaTest}` == '검수 완료'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-else-if="`${course.betaTest}` == '검수 중'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-rose-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-else-if="`${course.betaTest}` == '검수 전'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-zinc-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-else-if="`${course.betaTest}` == '업데이트 중'"  class="ml-1.5 px-1.5 py-1 text-xs md:text-xs text-white bg-amber-400 rounded font-normal">{{course.betaTest}}</div> 
+                <div v-else > </div> 
+              </div>
               <div class="keep-all text-slate-500 mb-1.5">{{course.description}}</div>
               <div class="text-sm text-slate-400">커리 개발: {{course.authors[0]}} {{course.authors[1]}} {{course.authors[2]}} {{course.authors[3]}}</div>
             </div>
