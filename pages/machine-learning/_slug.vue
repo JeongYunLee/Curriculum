@@ -420,7 +420,7 @@ export default {
         });
     },
 async asyncData({ $content, params }) {
-// 여기(curriculumName)를 수정해주면 돼요!
+// 여기(curriculumName)를 수정해주면 돼요! 
         const curriculumName = 'machine-learning';
 
         const curriname = await $content(curriculumName, params.slug)
